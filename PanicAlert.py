@@ -17,7 +17,7 @@ def sendmailfunction(recieveraddress,latitude,longitude,currentcity):
     msg['To']=recieveraddress
     msg.set_content("someone is in danger!"+ "https://maps.google.com/?q="+latitude+","+longitude)
     server=smtplib.SMTP_SSL('smtp.gmail.com',465)
-    server.login("panicalertnotice@gmail.com","Asdfghjkl12345@")
+    server.login("panicalertnotice@gmail.com","password")
     server.send_message(msg)
     server.quit();
     print("Mail sent to : ",currentcity)
